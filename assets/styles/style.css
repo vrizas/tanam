@@ -42,20 +42,32 @@ p {
 
 header {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: var(--content-pd);
+    height: 80px;
     position: sticky;
     top: 0;
+    z-index: 99;
 }
 
 .logo {
     width: 120px;
+    margin-top: -20px;
+}
+
+.menu-button, .close-button {
+    display: none;
+    position: relative;
+    z-index: 101;
+}
+
+.close-button {
+    color: var(--white);
 }
 
 nav {
     width: 40%;
-    margin-top: 30px;
 }
 
 nav ul {
@@ -86,6 +98,11 @@ nav a:hover {
 
 nav .login-button:hover {
     color: #eaeaea;
+}
+
+.float {
+    background-color: var(--white);
+    box-shadow: 0px 1px 10px #999;
 }
 
 main {
@@ -144,7 +161,7 @@ main {
 #tentang h2, #kerja h2, #kontak h2 {
     font-size: 2rem;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 70px;
 }
 
 #tentang section {
@@ -161,10 +178,6 @@ main {
 #tentang p {
     font-size: 1.3rem;
     margin-top: 40px;
-}
-
-#kerja h2 {
-    margin-top: 0;
 }
 
 #kerja section {
@@ -225,6 +238,7 @@ main {
 .flex-container {
     display: flex;
     justify-content: space-around;
+    margin-top: 70px;
 }
 
 aside {
@@ -259,10 +273,6 @@ aside img {
     margin-right: -8.5px;
 }
 
-#kontak h2 {
-    margin-bottom: 40px;
-}
-
 aside .email, aside .telp, aside .tinggal {
     margin-bottom: 20px;
 }
@@ -285,6 +295,139 @@ footer {
     margin-top: 80px;
 }
 
+@media screen and (max-width: 1279px){
+    body {
+        width: fit-content;
+    }
 
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        z-index: 101;
+        width: 100%;
+        height: 40%;
+        align-items: center;
+    }
+
+    nav a {
+        color: var(--white);
+    }
+
+    .hamburger-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background-color:rgba(26, 62, 54, 0.9);
+        z-index: 100;
+        display: none;
+        align-items: center;
+    }
+
+    .menu-button, .close-button {
+        font-size: 40px;
+        cursor: pointer;
+    }
+
+    .menu-button {
+        display: inherit;
+    }
+
+    nav {
+        width: fit-content;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .jumbotron {
+        background-size: 200%;
+    }
+
+    .jumbotron button {
+        font-size: 14px;
+    }
+
+    #tentang {
+        margin-bottom: 200px;
+    }
+
+    #tentang section {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #tentang img {
+        height: 400px;
+        width: 400px;
+        margin-right: 0;
+    }
+
+    #kerja {
+        margin-bottom: 550px;
+    }
+
+    #kerja section {
+        flex-wrap: wrap;
+        align-items: center;
+        margin-top: 40px;
+        gap: 40px;
+    }
+
+    #kerja .step {
+        width: 80%;
+    }
+
+    #kontak h2 {
+        margin-top: 70px;
+    }
+
+    .flex-container {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    aside {
+        width: 90%;
+        height: 250px;
+        margin-top: 40px;
+    }
+
+    aside section {
+        padding: 30px;
+    }
+
+    aside img {
+        width: 200px;
+        height: 250px;
+    }
+
+    aside h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1279px) {
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .jumbotron p {
+        font-size: 1.5rem;
+    }
+
+    .jumbotron button {
+        font-size: 18px;
+    } 
+    
+    #tentang, #kerja {
+        height: 65vh;
+    }
+}
 
 
