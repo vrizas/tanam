@@ -324,6 +324,7 @@ footer {
         z-index: 100;
         display: none;
         align-items: center;
+        transform: translateX(100%);
     }
 
     .menu-button, .close-button {
@@ -430,4 +431,9 @@ footer {
     }
 }
 
+@keyframes slideLeft{
+    to {
+        transform: translateX(0);    
+    }
+}
 

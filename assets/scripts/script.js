@@ -17,6 +17,7 @@ function menu(mobile) {
                 e.target.style.display = 'none';
                 document.querySelector('.close-button').style.display = 'inherit';
                 document.querySelector('.hamburger-menu').style.display = 'flex';
+                document.querySelector('.hamburger-menu').style.animation = 'slideLeft .3s ease-out forwards'
                 document.querySelector('nav ul').style.display = 'flex';
             }
             if(e.target.classList[2] == 'close-button') {
