@@ -7,7 +7,6 @@ window.addEventListener('scroll', function() {
     }
 });
 
-const mobile = window.matchMedia("(max-width: 1279px)");
 const nav = document.querySelector('nav');
 
 function menu(mobile) {
@@ -37,6 +36,21 @@ function menu(mobile) {
     }
 }
 
+const mobile = window.matchMedia("(max-width: 1279px)");
 menu(mobile);
-mobile.addEventListener(menu);
+mobile.addListener(menu);
 
+const dropdownBtn = document.querySelector('.dropdown-btn');
+const dropdownList = document.querySelector('.dropdown-list');
+
+dropdownBtn.addEventListener('click', function(e) {
+    dropdownList.classList.toggle('active');
+});
+
+window.addEventListener('click', function(e) {
+    if (e.target != dropdownBtn) {
+        if(dropdownList.classList.contains('active')) {
+            dropdownList.classList.remove('active');
+        }
+    }
+});

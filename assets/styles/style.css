@@ -130,9 +130,10 @@ main {
     margin-top: 25px;
     display: flex;
     align-items: center;
+    gap: 15px;
 }
 
-.jumbotron button {
+.jumbotron button, .jumbotron a.link-kerja {
     border: none;
     background-color: var(--green);
     padding: 10px 25px;
@@ -141,10 +142,45 @@ main {
     font-weight: var(--bold);
     border-radius: 3px;
     font-size: 18px;
+    text-decoration: none;
 }
 
-.jumbotron button:hover {
+.jumbotron button:hover, .jumbotron a.link-kerja:hover {
     color: #eaeaea;
+}
+
+.jumbotron .dropdown {
+    position: relative;
+}
+
+.jumbotron .dropdown-btn {
+    width: 192px;
+}
+
+.jumbotron .dropdown-list {
+    position: absolute;
+    background-color: #f1f1f1;
+    width: 192px;
+    display: none;
+    flex-direction: column;
+    border-radius: 3px;
+}
+
+.jumbotron .dropdown-list a {
+    color: var(--black);
+    font-weight: var(--rgl);
+    font-size: 15px;
+    text-decoration: none;
+    padding: 10px 25px;
+    display: block;
+}
+
+.jumbotron .active {
+    display: block;
+}
+
+.jumbotron .dropdown-list a:hover {
+    background-color: #ddd;
 }
 
 .jumbotron .buttons p {
@@ -352,9 +388,9 @@ footer {
         font-size: 14px;
     }
 
-    #tentang {
+    /* #tentang {
         margin-bottom: 200px;
-    }
+    } */
 
     #tentang section {
         width: 100%;
@@ -368,9 +404,9 @@ footer {
         margin-right: 0;
     }
 
-    #kerja {
-        margin-bottom: 550px;
-    }
+        /* #kerja {
+            margin-bottom: 550px;
+        } */
 
     #kerja section {
         flex-wrap: wrap;
@@ -411,6 +447,10 @@ footer {
     aside h3 {
         font-size: 1.2rem;
     }
+
+    #tentang, #kerja {
+        height: auto;
+    }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1279px) {
@@ -426,10 +466,8 @@ footer {
         font-size: 18px;
     } 
     
-    #tentang, #kerja {
-        height: 65vh;
-    }
 }
+
 
 @keyframes slideLeft{
     to {
