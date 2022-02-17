@@ -5,7 +5,6 @@
 }
 
 :root {
-    /* Colors */
     --black : #000;
     --white : #fff;
     --gray-green : #679389;
@@ -13,7 +12,6 @@
     --green : #3c8f7c;
     --dark-green : #1a3e36;
 
-    /* Font size */
     --thin : 100;
     --light : 300;
     --rgl : 400;
@@ -21,7 +19,6 @@
     --bold : 700;
     --black-size : 900;
 
-    /* Padding */
     --content-pd : 15px 30px; 
 }
 
@@ -384,13 +381,13 @@ footer {
         background-size: 200%;
     }
 
-    .jumbotron button {
+    .jumbotron button, .jumbotron a.link-kerja {
         font-size: 14px;
     }
 
-    /* #tentang {
-        margin-bottom: 200px;
-    } */
+    .jumbotron .dropdown-btn, .jumbotron .dropdown-list {
+        width: 160px;
+    }
 
     #tentang section {
         width: 100%;
@@ -403,10 +400,6 @@ footer {
         width: 400px;
         margin-right: 0;
     }
-
-        /* #kerja {
-            margin-bottom: 550px;
-        } */
 
     #kerja section {
         flex-wrap: wrap;
