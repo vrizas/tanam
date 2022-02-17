@@ -455,9 +455,13 @@ footer {
         font-size: 1.5rem;
     }
 
-    .jumbotron button {
+    .jumbotron button, .jumbotron a.link-kerja {
         font-size: 18px;
     } 
+
+    .jumbotron .dropdown-btn, .jumbotron .dropdown-list {
+        width: 192px;
+    }
     
 }
 
